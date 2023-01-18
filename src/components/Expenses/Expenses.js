@@ -19,15 +19,13 @@ function Expenses(props) {
   return (
     <div>
       <h2 className="title">Expense Tracker</h2>
-      <li>
-        <Card className="expenses">
-          <ExpensesFilter
-            selected={selectedFilterYear}
-            onFilterChange={onFilterChangeHandler}
-          ></ExpensesFilter>
-          <ExpensesList items={filteredExpenses}></ExpensesList>
-        </Card>
-      </li>
+      <Card className="expenses">
+        <ExpensesFilter
+          selected={selectedFilterYear}
+          onFilterChange={onFilterChangeHandler}
+        ></ExpensesFilter>
+        <ExpensesList items={filteredExpenses}></ExpensesList>
+      </Card>
     </div>
   );
 }
